@@ -1,0 +1,14 @@
+# Config file for Air (Live reload for Go applications)
+root = "."
+temp_dir = "tmp"
+[build]
+    # Binary file to run after build
+    bin = "main"
+    # Command to build the project
+    cmd = "go build -o {{.Output}} {{.Input}}"
+    # Working directory
+    dir = "."
+    # Patterns to watch for changes
+    exclude = ["tmp", "client/*"]
+    include = ["**/*.go"]
+    ignore = ["tmp/*"]
